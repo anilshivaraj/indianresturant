@@ -1,7 +1,6 @@
 "use client";
 
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { nanoid } from "nanoid";
 
 export interface CartItem {
   id: string;
@@ -49,6 +48,11 @@ function saveStoredCart(cart: StoredCart) {
   } catch {}
 }
 
+function generateFiveDigitId(): string {
+  const n = Math.floor(10000 + Math.random() * 90000);
+  return String(n);
+}
+
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [orderId, setOrderId] = useState<string | null>(null);
   const [items, setItems] = useState<CartItem[]>([]);
@@ -71,7 +75,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       }
       return [...prev, { ...item, qty }];
     });
-    setOrderId((id) => id ?? nanoid(8));
+    setOrderId((id) => id ?? generateFiveDigitId());
   }, []);
 
   const updateQty = useCallback((id: string, qty: number) => {

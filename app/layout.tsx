@@ -4,6 +4,8 @@ import "./globals.css";
 import { CartProvider } from "./providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+const CartBar = dynamic(() => import("@/components/CartBar"), { ssr: false });
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -41,6 +43,7 @@ export default function RootLayout({
               </div>
             </main>
             <Footer />
+            <CartBar />
           </div>
         </CartProvider>
       </body>

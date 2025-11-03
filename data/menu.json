@@ -1,0 +1,52 @@
+[
+  {
+    "id": "idly",
+    "name": "Idly",
+    "description": "Steamed rice cakes served with coconut chutney and sambar",
+    "price": 50,
+    "imageUrl": "https://images.pexels.com/photos/5410404/pexels-photo-5410404.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "category": "Breakfast"
+  },
+  {
+    "id": "dosa",
+    "name": "Dosa",
+    "description": "Crispy rice-lentil crepe with potato masala and sambar",
+    "price": 80,
+    "imageUrl": "https://images.pexels.com/photos/793765/pexels-photo-793765.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "category": "Breakfast"
+  },
+  {
+    "id": "vada",
+    "name": "Vada",
+    "description": "Golden fried lentil donuts, crunchy outside, soft inside",
+    "price": 40,
+    "imageUrl": "https://images.pexels.com/photos/6529890/pexels-photo-6529890.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "category": "Snacks"
+  },
+  {
+    "id": "pongal",
+    "name": "Pongal",
+    "description": "Comforting rice-lentil porridge tempered with ghee and pepper",
+    "price": 70,
+    "imageUrl": "https://images.pexels.com/photos/4106480/pexels-photo-4106480.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "category": "Breakfast"
+  },
+  {
+    "id": "coffee",
+    "name": "Filter Coffee",
+    "description": "Traditional South Indian filter coffee with frothy top",
+    "price": 30,
+    "imageUrl": "https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "category": "Beverages"
+  },
+  {
+    "id": "tea",
+    "name": "Masala Tea",
+    "description": "Spiced milk tea brewed with aromatic Indian spices",
+    "price": 25,
+    "imageUrl": "https://media.istockphoto.com/id/1426308134/photo/south-indian-filter-coffee-served-in-a-traditional-tumbler-or-cup-over-roasted-raw-beans.jpg?auto=compress&cs=tinysrgb&w=1200",
+    "category": "Beverages"
+  }
+]
+
+

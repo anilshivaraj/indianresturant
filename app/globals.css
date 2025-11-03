@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --maroon: #7a3a2f;
+  --gold: #b38b2c;
+  --leaf: #1f7a4c;
+  --coffee: #5a3e2b;
+  --cream: #fff7ea;
+  --charcoal: #2a2a2a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-maroon: var(--maroon);
+  --color-gold: var(--gold);
+  --color-leaf: var(--leaf);
+  --color-coffee: var(--coffee);
+  --color-cream: var(--cream);
+  --color-charcoal: var(--charcoal);
+  --font-sans: var(--font-poppins);
+  --font-serif: var(--font-playfair);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  background-image: url('/patterns/indian-motif.svg');
+  background-size: 240px 240px;
+  background-repeat: repeat;
+}
+
+h1, h2, h3, .heading-serif {
+  font-family: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-white shadow-md transition duration-200 ease-out;
+  background-image: linear-gradient(135deg, color(display-p3 0.48 0.18 0.14) 0%, var(--maroon) 30%, var(--gold) 130%);
+}
+
+.card-leaf {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,247,234,0.9));
+  border: 1px solid color-mix(in oklab, var(--gold) 25%, transparent);
+  box-shadow: 0 8px 24px rgba(122,58,47,0.12);
+  backdrop-filter: blur(2px);
 }

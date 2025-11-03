@@ -14,7 +14,6 @@ export default function Navbar() {
           </span>
         </Link>
         <nav className="flex items-center gap-6 text-sm font-medium">
-          <Link href="/" className="hover:text-[var(--maroon)] transition-colors">Home</Link>
           <Link href="/menu" className="hover:text-[var(--maroon)] transition-colors">Menu</Link>
           <CartIcon />
         </nav>

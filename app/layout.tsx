@@ -4,8 +4,7 @@ import "./globals.css";
 import { CartProvider } from "./providers";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import dynamic from "next/dynamic";
-const CartBar = dynamic(() => import("@/components/CartBar"), { ssr: false });
+import ClientShell from "./ClientShell";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -35,16 +34,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} ${playfair.variable} antialiased bg-[var(--cream)] text-[var(--charcoal)]`}>
         <CartProvider>
-          <div className="min-h-dvh flex flex-col">
-            <Navbar />
-            <main className="flex-1">
-              <div className="mx-auto max-w-6xl px-4">
-                {children}
-              </div>
-            </main>
-            <Footer />
-            <CartBar />
-          </div>
+          <ClientShell>
+            <div className="min-h-dvh flex flex-col">
+              <Navbar />
+              <main className="flex-1">
+                <div className="mx-auto max-w-6xl px-4">
+                  {children}
+                </div>
+              </main>
+              <Footer />
+            </div>
+          </ClientShell>
         </CartProvider>
       </body>
     </html>
